@@ -1,0 +1,45 @@
+* {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-style: normal;
+}
+
+/* body {
+    display: flex;
+} */
+
+header {
+    display: flex;
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    height: 100px;
+}
+
+.nav-main {
+    display: flex;
+    justify-content: space-around;
+    margin: 5px;
+}
+
+main {
+    margin: 5px;
+    border-radius: 25px;
+    flex-grow: 3;
+}
+
+section {
+    display: block;
+    width: 25%;
+    height: 200px;;
+    padding: 15px;
+    border-radius: 20px;
+    flex-grow: 1;
+}
+
+footer {
+    height: 200px;
+    border-radius: 25px;
+    margin: 5px;
+}
