@@ -54,7 +54,6 @@ nav ul {
     display: flex;
     flex-direction: column;
     gap: 15px;
-
 }
 
 nav ul li {
@@ -73,6 +72,28 @@ nav ul a {
 
 nav ul li:hover {
     background-color: rgb(205, 205, 223);
+}
+
+.recomendaciones {
+    display: flex;
+    margin-top: 110px;
+    padding: 20px;
+}
+
+.img-comentario {
+    flex: 0 0 auto;
+    margin-right: 15px;
+}
+
+.img-comentario img {
+    border-radius: 50%;
+    width: 80px;
+}
+
+.comentario {
+    flex: 1;
+    color:aliceblue;
+    font-size: 12px;
 }
 
 main {
