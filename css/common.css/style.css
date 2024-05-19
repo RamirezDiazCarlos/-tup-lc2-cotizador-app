@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/img/fondo_header.jpg);
+    background-image: url(/-tup-lc2-cotizador-app/img/fondo_header.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -97,10 +97,18 @@ nav ul li:hover {
 }
 
 main {
-    background-color: rgb(237, 245, 239);
     flex: 1;
+}
+
+.migas {
+    text-align: end;
+    margin-right: 40px;
+}
+
+.contenido-principal {
+    background-color: rgb(237, 245, 239);
     height: 450px;
-    margin: 25px 10px 10px 10px;
+    margin: 10px;
     border-radius: 24px;
 }
 
