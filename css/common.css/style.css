@@ -112,6 +112,38 @@ main {
     border-radius: 24px;
 }
 
+.contenido-principal h2 {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.contenedor_monedas {
+    display: flex;
+    padding-left: 15px;
+}
+
+.monedas {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 147, 5);
+    border-radius: 25px;
+}
+
+.monedas label {
+    margin: 5px;
+}
+
+.monedas select {
+    height: 45px;
+    margin: 5px;
+}
+
+.boton_busqueda {
+    height: 45px;
+}
+
+
 footer {
     background-color: #5d5d5d;
     color: rgb(0, 0, 0);
