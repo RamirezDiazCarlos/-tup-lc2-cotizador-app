@@ -18,7 +18,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/-tup-lc2-cotizador-app/img/fondo_header.jpg);
+    background-image: url(/img/fondo_header.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -146,6 +146,51 @@ main {
     height: 45px;
 }
 
+.actualizacion {
+    text-align: end;
+}
+
+.monedas_inicio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor_precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 350px;
+    background-color: darkgreen;
+    margin: 10px;
+}
+
+.lado-izquierdo {
+    flex: 1;
+}
+
+.lado-derecho {
+    display: flex;
+}
+
+.lado-derecho p {
+    padding: 5px;
+    text-align: center;
+}
+
+.contenedor-boton-favoritos {
+    display: flex;
+    align-items: center;
+}
+
+.boton_favoritos {
+    height: 40px;
+    align-items: center;
+}
+
+.boton_favoritos img {
+    width: 40px;
+}
 
 footer {
     background-color: #5d5d5d;
