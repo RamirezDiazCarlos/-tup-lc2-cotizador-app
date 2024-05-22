@@ -26,6 +26,8 @@ header {
 
 header h1 {
     font-size: 4vw;
+    text-shadow: 4px 4px 4px rgb(0, 0, 0);
+    color:  rgb(255, 215, 0);
 }
 
 .section-main {
@@ -98,11 +100,97 @@ nav ul li:hover {
 }
 
 main {
-    background-color: rgb(237, 245, 239);
     flex: 1;
+}
+
+.migas {
+    text-align: end;
+    margin-right: 40px;
+}
+
+.contenido-principal {
+    background-color: rgb(237, 245, 239);
     height: 450px;
-    margin: 25px 10px 10px 10px;
+    margin: 10px;
     border-radius: 24px;
+}
+
+.contenido-principal h2 {
+    text-align: center;
+    padding: 10px 10px;
+}
+
+.contenedor_monedas {
+    display: flex;
+    padding-left: 15px;
+}
+
+.monedas {
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    background-color: rgb(255, 147, 5);
+    border-radius: 25px;
+    box-shadow: 3px 3px 3px 3px rgb(0, 0, 1);
+}
+
+.monedas label {
+    margin: 5px;
+}
+
+.monedas select {
+    height: 45px;
+    margin: 5px;
+}
+
+.boton_busqueda {
+    height: 45px;
+}
+
+.actualizacion {
+    text-align: end;
+}
+
+.monedas_inicio {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contenedor_precio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 350px;
+    background-color: darkgreen;
+    margin: 10px;
+}
+
+.lado-izquierdo {
+    flex: 1;
+}
+
+.lado-derecho {
+    display: flex;
+}
+
+.lado-derecho p {
+    padding: 5px;
+    text-align: center;
+}
+
+.contenedor-boton-favoritos {
+    display: flex;
+    align-items: center;
+}
+
+.boton_favoritos {
+    height: 40px;
+    align-items: center;
+}
+
+.boton_favoritos img {
+    width: 40px;
 }
 
 footer {
