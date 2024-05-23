@@ -113,6 +113,7 @@ main {
     height: 450px;
     margin: 10px;
     border-radius: 24px;
+    width: 97%;
 }
 
 .contenido-principal h2 {
@@ -148,22 +149,24 @@ main {
 }
 
 .actualizacion {
-    text-align: end;
+    text-align:end;
+    margin-right: 30px;
 }
 
 .monedas_inicio {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap:wrap;
+    width: 100%;
 }
 
 .contenedor_precio {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    width: 350px;
-    background-color: darkgreen;
-    margin: 10px;
+    padding: 5px;
+    width: 500px;
+    background-color: rgb(145, 173, 145);
+    margin: 10px 10px 10px 40px ;
 }
 
 .lado-izquierdo {

@@ -114,6 +114,11 @@ main {
     border-radius: 24px;
 }
 
+.contenido-principal h2 {
+    text-align: center;
+    padding: 10px 10px;
+}
+
 footer {
     background-color: #5d5d5d;
     color: rgb(0, 0, 0);

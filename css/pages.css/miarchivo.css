@@ -102,6 +102,7 @@ main {
     flex: 1;
 }
 
+
 .migas {
     text-align: end;
     margin-right: 40px;
@@ -112,6 +113,11 @@ main {
     height: 450px;
     margin: 10px;
     border-radius: 24px;
+}
+
+.contenido-principal h2 {
+    text-align: center;
+    padding: 10px 10px;
 }
 
 footer {
