@@ -9,7 +9,7 @@
 body,
 html {
     width: 100%;
-    height: 100vh;
+    background-color: gray;
 }
 
 header {
@@ -74,12 +74,12 @@ nav ul a {
 }
 
 nav ul li:hover {
-    background-color: rgb(205, 205, 223);
+    background-color: gray;
 }
 
 .recomendaciones {
     display: flex;
-    margin-top: 110px;
+    margin-top: ;
     padding: 20px;
 }
 
@@ -109,7 +109,7 @@ main {
 }
 
 .contenido-principal {
-    background-color: rgb(45, 48, 25);
+    background-color: rgb(0, 0, 0);
     min-height: 450px;
     max-height: auto;
     margin: 10px;
@@ -121,6 +121,7 @@ main {
 .contenido-principal h2 {
     text-align: center;
     padding: 10px 10px;
+    color:  rgb(255, 215, 0);
 }
 
 .contenedor_monedas {
@@ -132,7 +133,7 @@ main {
     padding: 10px 15px;
     display: flex;
     align-items: center;
-    background-color: rgb(239, 241, 63);
+    background-color:  rgb(255, 215, 0);
     border-radius: 25px;
     box-shadow: 3px 3px 3px 3px rgb(0, 0, 1);
 }
@@ -153,6 +154,7 @@ main {
 .actualizacion {
     text-align:end;
     margin-right: 30px;
+    color:  rgb(255, 215, 0);
 }
 
 .monedas_inicio {
@@ -170,7 +172,7 @@ main {
     align-items: center;
     padding: 5px;
     width: 500px;
-    background-color: rgb(145, 173, 145);
+    background-color: gray;
     margin: 10px 10px 10px 40px ;
 }
 
