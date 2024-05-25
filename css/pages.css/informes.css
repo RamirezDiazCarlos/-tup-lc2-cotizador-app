@@ -8,7 +8,8 @@
 
 body,
 html {
-    width: 100vw;
+    width: 100%;
+    background-color: gray;
 }
 
 header {
@@ -31,12 +32,14 @@ header h1 {
 
 .section-main {
     display: flex;
-    width: 100vw;
 }
 
 section {
     background-color: rgb(0, 0, 0);
-    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    min-width: auto;
+    max-width: 20%;
     margin: 10px;
     border-radius: 24px;
     
@@ -73,12 +76,12 @@ nav ul a {
 }
 
 nav ul li:hover {
-    background-color: rgb(205, 205, 223);
+    background-color: gray;
 }
 
 .recomendaciones {
     display: flex;
-    margin-top: 110px;
+    margin-top: auto;
     padding: 20px;
 }
 
@@ -104,30 +107,118 @@ main {
 
 .migas {
     text-align: end;
-    margin-right: 40px;
+    padding-right: 40px;
 }
 
 .contenido-principal {
-    background-color: rgb(237, 245, 239);
-    height: 450px;
+    background-color: rgb(0, 0, 0);
+    min-height: 550px;
+    max-height: auto;
     margin: 10px;
-    border-radius: 24px;
+    width: 97%;
+    border-radius: 90px 40px;
+
 }
 
 .contenido-principal h2 {
     text-align: center;
     padding: 10px 10px;
+    color: rgb(255, 215, 0);
+}
+
+.contenedor_monedas {
+    padding: 10px;
+    display: flex;
+}
+
+.monedas {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(255, 215, 0);
+    border-radius: 15px;
+    margin-left: 20px;
+    max-height: 75px;
+}
+
+.select-boton {
+    display: flex;
+}
+
+.monedas select {
+    height: 45px;
+    margin: 8px;
+}
+
+.boton_busqueda {
+    height: 45px;
+    margin-top: 8px;
+}
+
+.graficos {
+    flex: 1;
+    height: 260px;
+    background-color: gray;
+    margin-left: 100px;
+    margin-right: 50px;
+}
+
+.compartir {
+    margin-top: auto;
+    display: flex;
+    align-items: center;
+    margin-left: 25px;
+    margin-bottom: 10px;
+}
+
+.boton-compartir img {
+    width: 45px;
+}
+
+.goma-de-borrar {
+    height: 15px;
+    width: 15px;
+}
+
+.contenedor-tabla {
+    margin: 20px;
+    display: flex;
+    border-radius: 20px;
+}
+
+table {
+    margin: 15px;
+    width: 97%;
+    border-collapse: collapse;
+    background-color: #e1eafa;
+}
+
+th,td {
+    border-left: 1px solid;
+    border-right: 1px solid;
+    text-align: center;
+}
+
+th {
+    background-color: rgb(175, 208, 240);
+    border-color: rgb(175, 208, 240);
+}
+
+.fecha{
+    text-align: left;
+    background-color: rgb(99, 167, 245);
+    padding: 1px;
 }
 
 footer {
-    background-color: #5d5d5d;
-    color: rgb(0, 0, 0);
+    background-color: #000000;
+    color: rgb(255, 215, 0);
     margin: 10px;
     border-radius: 25px;
 }
 
 footer a {
-    color: black;
+    color: rgb(255, 215, 0);
 }
 
 .footer-cards {

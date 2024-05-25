@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,6 +12,7 @@
     <link rel="stylesheet" href="/css/pages.css/informes.css">
     <title>Cotizador de Monedas - Informes</title>
 </head>
+
 <body>
     <header>
         <h1>Cotizador de Monedas</h1>
@@ -49,7 +51,93 @@
             </div>
             <div class="contenido-principal">
                 <h2>Informe</h2>
+                <div class="contenedor_monedas">
+                    <div class="monedas">
+                        <label for="seleccion_de_monedas">Seleccione una moneda</label>
+                        <div class="select-boton">
+                            <select name="monedas" id="monedas">
+                                <option value="">Elegir</option>
+                                <option value="TODAS">TODAS - Se van a mostrar todas las cotizaciones disponibles</option>
+                                <option value="dolar_oficial">Dólar Oficial</option>
+                                <option value="dolar_blue">Dólar Blue</option>
+                                <option value="dolar_bolsa">Dólar Bolsa (MEP)</option>
+                                <option value="dolar_liqui">Dólar cortado con Liqui (CCL)</option>
+                                <option value="dolar_tarjeta">Dólar Tarjeta</option>
+                                <option value="dolar_mayorista">Dólar Mayorista</option>
+                                <option value="dolar_cripto">Dólar Cripto</option>
+                                <option value="euro">Euro</option>
+                                <option value="real">Real Brasileño</option>
+                                <option value="peso_chileno">Peso Chileno</option>
+                                <option value="peso_uruguayo">Peso Uruguayo</option>
+                            </select>
+                            <button class="boton_busqueda"><img src="/img/boton-busqueda.svg" alt="busqueda"></button>
+                        </div>
+                        <div class="compartir">
+                            <button class="boton-compartir">
+                                <img src="/img/icono-compartir.png" alt="compartir">
+                            </button>
+                            <a href="#">Compartir Información</a>
+                        </div>
+                    </div>
+                    <div class="graficos"></div>
+                </div>
+
+                <div class="contenedor-tabla">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Moneda</th>
+                                <th>Fecha</th>
+                                <th>Compra</th>
+                                <th>Venta</th>
+                                <th>Variación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td colspan="5" class="fecha">Dolar Blue</td>
+                            </tr>
+                            <tr>
+                                <td rowspan="5"></td>
+                                <td>15/04/24</td>
+                                <td>14/04/24</td>
+                                <td>13/04/24</td>
+                                <td><button><img src="/img/Goma_de_borrar.png.png" alt="Borrar"
+                                            class="goma-de-borrar"></button></td>
+                            </tr>
+                            <tr>
+                                <td>14/04/24</td>
+                                <td>$996.09</td>
+                                <td>$1000.06</td>
+                                <td><button><img src="/img/Goma_de_borrar.png.png" alt="Borrar"
+                                            class="goma-de-borrar"></button></td>
+                            </tr>
+                            <tr>
+                                <td>13/04/24</td>
+                                <td>$1355.2</td>
+                                <td>$1419.2</td>
+                                <td><button><img src="/img/Goma_de_borrar.png.png" alt="Borrar"
+                                            class="goma-de-borrar"></button></td>
+                            </tr>
+                            <tr>
+                                <td>12/04/24</td>
+                                <td>$1050</td>
+                                <td>$1086</td>
+                                <td><button><img src="/img/Goma_de_borrar.png.png" alt="Borrar"
+                                            class="goma-de-borrar"></button></td>
+                            </tr>
+                            <tr>
+                                <td>11/04/24</td>
+                                <td>$1000</td>
+                                <td>$1200</td>
+                                <td><button><img src="/img/Goma_de_borrar.png.png" alt="Borrar"
+                                            class="goma-de-borrar"></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
         </main>
     </div>
 
@@ -90,4 +178,5 @@
         </div>
     </footer>
 </body>
+
 </html>
