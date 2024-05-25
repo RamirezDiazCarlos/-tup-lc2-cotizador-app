@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* background-image: url(img/fondo_header.jpg); */
+    background-image: url(/img/fondo_header.jpg);
     background-size: cover;
     background-position: center;
 }
@@ -113,7 +113,7 @@ main {
 
 .contenido-principal {
     background-color: rgb(0, 0, 0);
-    min-height: 550px;
+    min-height: 450px;
     max-height: auto;
     margin: 10px;
     width: 97%;
@@ -137,7 +137,6 @@ main {
     align-items: center;
     background-color:  rgb(255, 215, 0);
     border-radius: 25px;
-    box-shadow: 3px 3px 3px 3px gray;
 }
 
 .monedas label {
@@ -197,7 +196,20 @@ main {
 
 .boton_favoritos {
     height: 40px;
+    width: 40px;
     align-items: center;
+    background-image: url(/img/agregar-favoritos.png);
+    background-size: cover;
+    background-color: transparent;
+}
+
+.boton_favoritos_agregado {
+    height: 40px;
+    width: 40px;
+    align-items: center;
+    background-image: url(/img/boton-favoritos.png);
+    background-size: cover;
+    background-color: transparent;
 }
 
 .boton_favoritos img {
