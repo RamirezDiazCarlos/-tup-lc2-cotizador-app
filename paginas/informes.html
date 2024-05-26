@@ -8,33 +8,36 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
-        rel="stylesheet">
+        rel="stylesheet"><!--LINK DE LA FUENTE "ROBOTO" DESDE GOOGLE FONTS-->
     <link rel="stylesheet" href="../css/pages.css/informes.css">
     <title>Cotizador de Monedas - Informes</title>
 </head>
 
 <body>
+    <!--ENCABEZADO-->
     <header>
         <h1>Cotizador de Monedas</h1>
     </header>
     <div class="section-main">
         <section>
+            <!--NAVEGACION-->
             <nav class="navegacion">
                 <ul>
-                    <a href="../index.html">
+                    <a href="../index.html" title="Inicio">
                         <li><img src="../img/icono-inicio.svg" alt="Inicio">Inicio</li>
                     </a>
-                    <a href="Miarchivo.html">
+                    <a href="Miarchivo.html" title="Mi Archivo">
                         <li><img src="../img/icono-archivo.svg" alt="MiArchivo">Mi Archivo</li>
                     </a>
-                    <a href="#">
+                    <a href="#" class="seleccionado" title="Informes">
                         <li><img src="../img/icono-informe.svg" alt="Informes">Informes</li>
                     </a>
-                    <a href="Contacto.html">
+                    <a href="Contacto.html" title="Contacto">
                         <li><img src="../img/icono-contacto.svg" alt="Contacto">Contáctenos</li>
                     </a>
                 </ul>
             </nav>
+            <!--RECOMENDACIONES-->
             <div class="recomendaciones">
                 <div class="img-comentario">
                     <img src="../img/perfil-comentario.jpeg" alt="Perfil">
@@ -45,17 +48,19 @@
                 </div>
             </div>
         </section>
+        <!--CONTENIDO PRINCIPAL-->
         <main>
             <div class="migas">
                 <p>Usted está aqui: <a href="../index.html">Inicio</a> / Informes</p>
             </div>
             <div class="contenido-principal">
                 <h2>Informe</h2>
+                <!--SELECCIONADOR DE MONEDAS-->
                 <div class="contenedor_monedas">
                     <div class="monedas">
-                        <label for="seleccion_de_monedas">Seleccione una moneda</label>
+                        <label for="moneda" title="Seleccione una moneda">Seleccione una moneda</label>
                         <div class="select-boton">
-                            <select name="monedas" id="monedas">
+                            <select name="moneda" id="moneda">
                                 <option value="">Elegir</option>
                                 <option value="TODAS">TODAS - Se van a mostrar todas las cotizaciones disponibles</option>
                                 <option value="dolar_oficial">Dólar Oficial</option>
@@ -70,16 +75,17 @@
                                 <option value="peso_chileno">Peso Chileno</option>
                                 <option value="peso_uruguayo">Peso Uruguayo</option>
                             </select>
-                            <button class="boton_busqueda"><img src="../img/boton-busqueda.svg" alt="busqueda"></button>
+                            <button class="boton_busqueda" title="Buscar"><img src="../img/boton-busqueda.svg" alt="busqueda"></button>
                         </div>
                         <div class="compartir">
                             <button class="boton-compartir" title="Compartir"></button>
                             <a href="" title="Compartir">Compartir Información</a>
                         </div>
                     </div>
-                    <div class="graficos"><img src="../img/dolar-blue.jpg" alt=""></div>
+                    <!--GRAFICO A MOSTRAR-->
+                    <div class="graficos"><img src="../img/dolar-blue.jpg" alt="grafico" title="Grafico Dolar Blue"></div>
                 </div>
-
+                <!--TABLA A MOSTRAR-->
                 <div class="contenedor-tabla">
                     <table>
                         <thead>
@@ -133,7 +139,7 @@
 
         </main>
     </div>
-
+    <!--PIE DE PAGINA-->
     <footer>
         <div class="contenedor-f">
             <div class="footer-cards">

@@ -1,3 +1,4 @@
+/*ESTILO GLOBAL*/
 * {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -12,6 +13,7 @@ html {
     background-color: gray;
 }
 
+/*ESTILO DEL ENCABEZADO*/
 header {
     height: 100px;
     margin: 10px;
@@ -27,14 +29,16 @@ header {
 header h1 {
     font-size: 4vw;
     text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    color:  rgb(255, 215, 0);
+    color: rgb(255, 215, 0);
 }
 
+/*CONTENEDOR PRINCIPAL*/
 .section-main {
     display: flex;
     width: 100vw;
 }
 
+/*ESTILO NAVEGACION*/
 section {
     background-color: rgb(0, 0, 0);
     display: flex;
@@ -43,7 +47,7 @@ section {
     max-width: 20%;
     margin: 10px;
     border-radius: 24px;
-    
+
 }
 
 nav {
@@ -80,6 +84,11 @@ nav ul li:hover {
     background-color: gray;
 }
 
+.seleccionado li {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
+/*ESTILO RECOMENDACIONES*/
 .recomendaciones {
     display: flex;
     margin-top: auto;
@@ -98,7 +107,7 @@ nav ul li:hover {
 
 .comentario {
     flex: 1;
-    color:aliceblue;
+    color: aliceblue;
     font-size: 12px;
 }
 
@@ -123,9 +132,10 @@ main {
 .contenido-principal h2 {
     text-align: center;
     padding: 10px 10px;
-    color:  rgb(255, 215, 0);
+    color: rgb(255, 215, 0);
 }
 
+/*ESTILO MONEDAS*/
 .contenedor_monedas {
     display: flex;
     padding-left: 15px;
@@ -135,7 +145,7 @@ main {
     padding: 10px 15px;
     display: flex;
     align-items: center;
-    background-color:  rgb(255, 215, 0);
+    background-color: rgb(255, 215, 0);
     border-radius: 25px;
 }
 
@@ -152,15 +162,16 @@ main {
     height: 45px;
 }
 
+/*ACTUALIZACION DE DATOS*/
 .actualizacion {
-    text-align:end;
+    text-align: end;
     margin-right: 40px;
-    color:  rgb(255, 215, 0);
+    color: rgb(255, 215, 0);
 }
 
 .monedas_inicio {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     width: 100%;
     flex-wrap: wrap;
     padding: 10px;
@@ -173,7 +184,7 @@ main {
     padding: 5px;
     width: 450px;
     background-color: gray;
-    margin: 10px 10px 10px 40px ;
+    margin: 10px 10px 10px 40px;
 }
 
 .lado-izquierdo {
@@ -200,7 +211,7 @@ main {
     align-items: center;
     background-image: url('../../img/agregar-favoritos.png');
     background-size: cover;
-    background-color:transparent;
+    background-color: transparent;
 }
 
 .boton_favoritos_agregado {
@@ -216,6 +227,7 @@ main {
     width: 40px;
 }
 
+/*ESTILO PIE DE PAGINA*/
 footer {
     background-color: #000000;
     color: rgb(255, 215, 0);

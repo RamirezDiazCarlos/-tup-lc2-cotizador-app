@@ -14,27 +14,30 @@
 </head>
 
 <body>
+    <!--ENCABEZADO-->
     <header>
         <h1>Cotizador de Monedas</h1>
     </header>
     <div class="section-main">
         <section>
+            <!--NAVEGACION-->
             <nav class="navegacion">
                 <ul>
-                    <a href="../index.html">
+                    <a href="../index.html" title="Inicio">
                         <li><img src="../img/icono-inicio.svg" alt="Inicio">Inicio</li>
                     </a>
-                    <a href="Miarchivo.html">
+                    <a href="Miarchivo.html" title="Mi Archivo">
                         <li><img src="../img/icono-archivo.svg" alt="MiArchivo">Mi Archivo</li>
                     </a>
-                    <a href="informes.html">
+                    <a href="informes.html" title="Informes">
                         <li><img src="../img/icono-informe.svg" alt="Informes">Informes</li>
                     </a>
-                    <a href="#">
+                    <a href="#" class="seleccionado" title="Contacto">
                         <li><img src="../img/icono-contacto.svg" alt="Contacto">Contáctenos</li>
                     </a>
                 </ul>
             </nav>
+            <!--RECOMENDACIONES-->
             <div class="recomendaciones">
                 <div class="img-comentario">
                     <img src="../img/perfil-comentario.jpeg" alt="Perfil">
@@ -45,39 +48,43 @@
                 </div>
             </div>
         </section>
+        <!--CONTENIDO PRINCIPAL-->
         <main>
             <div class="migas">
-                <p>Usted está aqui: <a href="../index.html">Inicio</a> / Contacto</p>
+                <p>Usted está aqui: <a href="../index.html" title="Inicio">Inicio</a> / Contacto</p>
             </div>
             <div class="contenido-principal">
                 <h2>Contacto Web Cotizaciones</h2>
+                <!--FORMULARIO DE CONTACTO-->
                 <div class="formulario-texto">
                     <div class="contenedor-formulario">
                         <div class="formulario">
                             <fieldset>
                                 <legend>DATOS DE CONTACTO</legend>
-                                <label for="nombre">Nombre:</label>
+                                <label for="nombre" title="Nombre">Nombre:</label>
                                 <input type="text" id="nombre" name="nombre" value="" /><br><br>
 
-                                <label for="email">Email:</label>
+                                <label for="email" title="Email">Email:</label>
                                 <input type="text" id="email" name="email" value="" /><br><br>
 
-                                <label for="mensaje">Mensaje:</label>
-                                <textarea type="text" id="mensaje" name="mensaje" size="30" cols="30"
+                                <label for="mensaje" title="Mensaje">Mensaje:</label>
+                                <textarea type="text" id="mensaje" name="mensaje" size="40" cols="40"
                                     rows="5"></textarea><br>
                             </fieldset>
                         </div>
                         <div class="botones-formulario">
-                            <button class="limpiar">LIMPIAR</button>
-                            <button class="enviar">ENVIAR</button>
+                            <button class="limpiar" title="Limpiar">LIMPIAR</button>
+                            <button class="enviar" title="Enviar">ENVIAR</button>
                         </div>
                     </div>
+                    <!--SUGERENCIAS-->
                     <div class="contenedor-texto">
                         <div class="parrafos">
                             <p class="sugerencia">Si tiene alguna sugerencia o inconveniente por favor complete el siguiente formulario y
                                 envíenoslo. Lo contactaremos a la brevedad.</p>
-                            <p class="dolarapi">Esta web esta desarrollada utilizando http://dolarapi.com/</p>
+                            <p class="dolarapi">Esta web esta desarrollada utilizando <a href="http://dolarapi.com/" target="_blank" title="Ir a DolarAPI">http://dolarapi.com/</a></p>
                         </div>
+                        <!--DATOS DE CONTACTO-->
                         <div class="datos-contacto">
                             <div class="tex">
                                 <p>DATOS DE CONTACTO</p>
@@ -92,17 +99,10 @@
                         </div>
                     </div>
                 </div>
-
-
-
-
-
-
-
             </div>
         </main>
     </div>
-
+    <!--PIE DE PAGINA-->
     <footer>
         <div class="contenedor-f">
             <div class="footer-cards">
@@ -115,10 +115,10 @@
                 </div>
                 <div>
                     <h2>Accesos</h2>
-                    <p>><a href="../index.html">Inicio</a></p>
-                    <p>><a href="Miarchivo.html">Mi Archivo</a></p>
-                    <p>><a href="informes.html">Informes</a></p>
-                    <p>><a href="#">Contáctenos</a></p>
+                    <p>><a href="../index.html" title="Inicio">Inicio</a></p>
+                    <p>><a href="Miarchivo.html" title="Mi Archivo">Mi Archivo</a></p>
+                    <p>><a href="informes.html" title="Informes">Informes</a></p>
+                    <p>><a href="#" title="Contacto">Contáctenos</a></p>
                 </div>
                 <div>
                     <h2>Contacto</h2>

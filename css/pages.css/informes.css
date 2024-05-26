@@ -78,6 +78,10 @@ nav ul li:hover {
     background-color: gray;
 }
 
+.seleccionado li {
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+}
+
 .recomendaciones {
     display: flex;
     margin-top: auto;
@@ -107,6 +111,10 @@ main {
 .migas {
     text-align: end;
     padding-right: 40px;
+}
+
+.migas a {
+    color: rgb(255, 215, 0);
 }
 
 .contenido-principal {

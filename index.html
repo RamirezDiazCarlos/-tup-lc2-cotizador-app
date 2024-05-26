@@ -14,27 +14,31 @@
 </head>
 
 <body>
+    <!--ENCABEZADO-->
     <header>
         <h1>Cotizador de Monedas</h1>
     </header>
+
     <div class="section-main">
         <section>
+            <!--NAVEGACION-->
             <nav class="navegacion">
                 <ul>
-                    <a href="#">
-                        <li><img src="img/icono-inicio.svg" alt="Inicio">Inicio</li>
+                    <a href="#" class="seleccionado" title="Inicio">
+                        <li><img src="img/icono-inicio.svg" alt="inicio">Inicio</li>
                     </a>
-                    <a href="paginas/Miarchivo.html">
+                    <a href="paginas/Miarchivo.html" title="Mi Archivo">
                         <li><img src="img/icono-archivo.svg" alt="MiArchivo">Mi Archivo</li>
                     </a>
-                    <a href="paginas/informes.html">
+                    <a href="paginas/informes.html" title="Informes">
                         <li><img src="img/icono-informe.svg" alt="Informes">Informes</li>
                     </a>
-                    <a href="paginas/Contacto.html">
+                    <a href="paginas/Contacto.html" title="Contacto">
                         <li><img src="img/icono-contacto.svg" alt="Contacto">Contáctenos</li>
                     </a>
                 </ul>
             </nav>
+            <!--RECOMENDACIONES-->
             <div class="recomendaciones">
                 <div class="img-comentario">
                     <img src="img/perfil-comentario.jpeg" alt="Perfil">
@@ -46,15 +50,18 @@
             </div>
         </section>
 
+        <!--CONTENIDO PRINCIPAL-->
         <main>
+            <!--MIGAS DE PAN-->
             <div class="migas">
                 <p>Usted está aqui: Inicio</p>
             </div>
+            <!--PIZARRA DE COTIZACIONES-->
             <div class="contenido-principal">
                 <h2>Pizarra de Cotizaciones</h2>
                 <div class="contenedor_monedas">
                     <div class="monedas">
-                        <label for="seleccion_de_monedas">Seleccione una moneda</label>
+                        <label for="seleccion_de_monedas" title="Seleccione una moneda">Seleccione una moneda</label>
                         <select name="monedas" id="monedas">
                             <option value="">Elegir</option>
                             <option value="TODAS">TODAS - Se van a mostrar todas las cotizaciones disponibles</option>
@@ -70,12 +77,14 @@
                             <option value="peso_chileno">Peso Chileno</option>
                             <option value="peso_uruguayo">Peso Uruguayo</option>
                         </select>
-                        <button class="boton_busqueda"><img src="img/boton-busqueda.svg" alt="buscar"></button>
+                        <button class="boton_busqueda" title="Buscar"><img src="img/boton-busqueda.svg" alt="buscar"></button>
                     </div>
                 </div>
+                <!--ACTUALIZACION DE DATOS-->
                 <div class="actualizacion">
                     <p>Datos actualizados al 22/5/2024 22:00 hs.</p>
                 </div>
+                <!--COTIZACION DE MONEDAS-->
                 <div class="monedas_inicio">
                     <div class="contenedor_precio">
                         <div class="lado-izquierdo">
@@ -165,7 +174,6 @@
                         </div>
                     </div>
                     <div class="contenedor-boton-favoritos">
-
                         <button class="boton_favoritos" title="Agregar a favoritos"></button>
                     </div>
                     <div class="contenedor_precio">
@@ -190,7 +198,7 @@
             </div>
         </main>
     </div>
-
+    <!--PIE DE PAGINA-->
     <footer>
         <div class="contenedor-f">
             <div class="footer-cards">
@@ -203,10 +211,10 @@
                 </div>
                 <div>
                     <h2>Accesos</h2>
-                    <p>><a href="#">Inicio</a></p>
-                    <p>><a href="/paginas/Miarchivo.html">Mi Archivo</a></p>
-                    <p>><a href="/paginas/informes.html">Informes</a></p>
-                    <p>><a href="/paginas/Contacto.html">Contáctenos</a></p>
+                    <p>><a href="#" title="Inicio">Inicio</a></p>
+                    <p>><a href="/paginas/Miarchivo.html" title="Mi Archivo">Mi Archivo</a></p>
+                    <p>><a href="/paginas/informes.html" title="Informes">Informes</a></p>
+                    <p>><a href="/paginas/Contacto.html" title="Contacto">Contáctenos</a></p>
                 </div>
                 <div>
                     <h2>Contacto</h2>
