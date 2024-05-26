@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../img/fondo_header.jpg');
+    /* background-image: url('/img/fondo_header.jpg'); */
     background-size: cover;
     background-position: center;
 }
@@ -198,7 +198,7 @@ main {
     height: 40px;
     width: 40px;
     align-items: center;
-    background-image: url('../img/agregar-favoritos.png');
+    /* background-image: url('/img/agregar-favoritos.png'); */
     background-size: cover;
     background-color: transparent;
 }
@@ -207,7 +207,7 @@ main {
     height: 40px;
     width: 40px;
     align-items: center;
-    background-image: url('../img/boton-favoritos.png');
+    /* background-image: url('/img/boton-favoritos.png'); */
     background-size: cover;
     background-color: transparent;
 }
