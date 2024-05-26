@@ -171,7 +171,7 @@ main {
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    width: 500px;
+    width: 450px;
     background-color: gray;
     margin: 10px 10px 10px 40px ;
 }
@@ -200,7 +200,7 @@ main {
     align-items: center;
     background-image: url('../../img/agregar-favoritos.png');
     background-size: cover;
-    background-color: transparent;
+    background-color:transparent;
 }
 
 .boton_favoritos_agregado {
