@@ -19,7 +19,7 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url(/img/fondo_header.jpg);
+    background-image: url('../../img/fondo_header.jpg');
     background-size: cover;
     background-position: center;
 }
