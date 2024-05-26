@@ -177,7 +177,7 @@ main {
 }
 
 .compartir button {
-    background-image: url(/img/compartir.png);
+    background-image: url('../../img/compartir.png');
     background-size: cover;
     height: 30px;
     width: 30px;
