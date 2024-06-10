@@ -10,6 +10,7 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/common.css/style.css">
+    <script src="/js/common.js/common.js" defer></script>
     <title>Cotizador de Monedas - Inicio</title>
 </head>
 
@@ -82,7 +83,7 @@
                 </div>
                 <!--ACTUALIZACION DE DATOS-->
                 <div class="actualizacion">
-                    <p>Datos actualizados al 22/5/2024 22:00 hs.</p>
+                    <p id="actualizacionDatos">Datos actualizados al 22/5/2024 22:00 hs.</p>
                 </div>
                 <!--COTIZACION DE MONEDAS-->
                 <div class="monedas_inicio">
@@ -93,11 +94,11 @@
                         <div class="lado-derecho">
                             <div>
                                 <p>Compra</p>
-                                <p class="precio">$847</p>
+                                <p class="precio" id="precio_compra_oficial"></p>
                             </div>
                             <div>
                                 <p>Venta</p>
-                                <p class="precio">$887</p>
+                                <p class="precio" id="precio_venta_oficial">888</p>
                             </div>
                         </div>
                     </div>
@@ -111,11 +112,11 @@
                         <div class="lado-derecho">
                             <div>
                                 <p>Compra</p>
-                                <p class="precio">$995</p>
+                                <p class="precio" id="precio_compra_blue">$995</p>
                             </div>
                             <div>
                                 <p>Venta</p>
-                                <p class="precio">$1015</p>
+                                <p class="precio" id="precio_venta_blue">$1015</p>
                             </div>
                         </div>
                     </div>
@@ -129,11 +130,11 @@
                         <div class="lado-derecho">
                             <div>
                                 <p>Compra</p>
-                                <p class="precio">$1355.2</p>
+                                <p class="precio" id="precio_compra_tarjeta">$1355.2</p>
                             </div>
                             <div>
                                 <p>Venta</p>
-                                <p class="precio">$1419.2</p>
+                                <p class="precio" id="precio_venta_tarjeta">$1419.2</p>
                             </div>
                         </div>
                     </div>
@@ -147,11 +148,11 @@
                         <div class="lado-derecho">
                             <div>
                                 <p>Compra</p>
-                                <p class="precio">$996.09</p>
+                                <p class="precio" id="precio_compra_mep">$996.09</p>
                             </div>
                             <div>
                                 <p>Venta</p>
-                                <p class="precio">$1000.6</p>
+                                <p class="precio" id="precio_venta_mep">$1000.6</p>
                             </div>
                         </div>
                     </div>
@@ -165,11 +166,11 @@
                         <div class="lado-derecho">
                             <div>
                                 <p>Compra</p>
-                                <p class="precio">$1030.6</p>
+                                <p class="precio" id="precio_compra_ccl">$1030.6</p>
                             </div>
                             <div>
                                 <p>Venta</p>
-                                <p class="precio">$1038.6</p>
+                                <p class="precio" id="precio_venta_ccl">$1038.6</p>
                             </div>
                         </div>
                     </div>
@@ -183,11 +184,11 @@
                         <div class="lado-derecho">
                             <div>
                                 <p>Compra</p>
-                                <p class="precio">$1050</p>
+                                <p class="precio" id="precio_compra_cripto"></p>
                             </div>
                             <div>
                                 <p>Venta</p>
-                                <p class="precio">$1086</p>
+                                <p class="precio" id="precio_venta_cripto"></p>
                             </div>
                         </div>
                     </div>
@@ -235,6 +236,9 @@
             <p>TUP - Cátedra de Laboratorio de Computación 2 - Año 2024</p>
         </div>
     </footer>
+
+
+    
 </body>
 
 </html>
