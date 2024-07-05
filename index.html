@@ -10,7 +10,6 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/common.css/style.css">
-    <script src="/js/common.js/common.js" defer></script>
     <title>Cotizador de Monedas - Inicio</title>
 </head>
 
@@ -62,13 +61,13 @@
                 <h2>Pizarra de Cotizaciones</h2>
                 <div class="contenedor_monedas">
                     <div class="monedas">
-                        <label for="seleccion_de_monedas" title="Seleccione una moneda">Seleccione una moneda</label>
+                        <label for="monedas" title="Seleccione una moneda">Seleccione una moneda</label>
                         <select name="monedas" id="monedas">
                             <option value="">Elegir</option>
                             <option value="TODAS">TODAS - Se van a mostrar todas las cotizaciones disponibles</option>
                             <option value="dolar">Dólar (todas las cotizaciones del dólar)</option>
-                            <option value="eur">Euro</option>
-                            <option value="brl">Real Brasileño</option>
+                            <option value="euro">Euro</option>
+                            <option value="real">Real Brasileño</option>
                             <option value="peso_chileno">Peso Chileno</option>
                             <option value="peso_uruguayo">Peso Uruguayo</option>
                         </select>                        
@@ -80,7 +79,7 @@
                     <p id="actualizacionDatos">Datos actualizados al 22/5/2024 22:00 hs.</p>
                 </div>
                 <!--COTIZACION DE MONEDAS-->
-                <div class="monedas_inicio" id="exchangeRates">
+                <div class="monedas_inicio" id="tipoDeCambio">
                     
                 </div>
             </div>
@@ -125,7 +124,7 @@
     </footer>
 
 
-    
+    <script src="js/common.js/common.js" defer></script>
 </body>
 
 </html>

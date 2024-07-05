@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const apiBaseURL = 'https://dolarapi.com/v1/cotizaciones';
-    const apiDollarURL = 'https://dolarapi.com/v1/dolares'; 
+    const apiDollarURL = 'https://dolarapi.com/v1/dolares';
 
     function fetchCotizaciones(moneda) {
         let url = '';
@@ -8,10 +8,10 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'dolar':
                 url = apiDollarURL;
                 break;
-            case 'eur':
+            case 'euro':
                 url = `${apiBaseURL}/eur`;
                 break;
-            case 'brl':
+            case 'real':
                 url = `${apiBaseURL}/brl`;
                 break;
             case 'peso_chileno':
@@ -31,17 +31,18 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(response => response.json())
             .then(data => {
                 actualizarCotizaciones(moneda, data);
-            })
+                actualizarFecha();
+            });
     }
-    
+
     function actualizarCotizaciones(moneda, data) {
-        const contenedor = document.getElementById('exchangeRates');
+        const contenedor = document.getElementById('tipoDeCambio');
         contenedor.innerHTML = ''; // Limpiar contenido existente
-    
+
         const crearDivCotizacion = (titulo, compra, venta) => {
             const div = document.createElement('div');
             div.classList.add('contenedor_precio');
-    
+
             div.innerHTML = `
                 <div class="lado-izquierdo"><p>${titulo}</p></div>
                 <div class="lado-derecho">
@@ -63,10 +64,21 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    function actualizarFecha() {
+        const fechaElemento = document.getElementById('actualizacionDatos');
+        const fechaActual = new Date();
+        const opciones = { year: 'numeric', month: 'numeric', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        fechaElemento.textContent = `Datos actualizados al ${fechaActual.toLocaleDateString('es-ES', opciones)}`;
+    }
+
     const monedasSelect = document.getElementById('monedas');
     monedasSelect.addEventListener('change', (event) => {
         fetchCotizaciones(event.target.value);
     });
+
+    setInterval(() => {
+        fetchCotizaciones(monedasSelect.value);
+    }, 5 * 60 * 1000);
 
     fetchCotizaciones(monedasSelect.value);
 });
