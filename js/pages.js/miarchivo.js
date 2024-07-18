@@ -6,7 +6,7 @@ function removerDeFavoritos(cotizacion) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
+    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
     const contenedor = document.getElementById('favoritos');
 
     const groupByDate = (data) => {
@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         <td>${cotizacion.titulo}</td>
                         <td>${cotizacion.compra}</td>
                         <td>${cotizacion.venta}</td>
-                        <td><button class="delete" data-fecha="${fecha}" data-index="${index}"><img src="../img/Goma_de_borrar.png" alt="Borrar" class="goma-de-borrar"></button></td>
+                        <td><button class="delete" data-fecha="${fecha}" data-index="${index}"><img src="../img/Goma_de_borrar.png.png" alt="Borrar" class="goma-de-borrar"></button></td>
                     </tr>
                 `;
             });
@@ -52,21 +52,54 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const eliminarFavorito = (fecha, index) => {
-        const groupedFavoritos = groupByDate(favoritos);
+        let groupedFavoritos = groupByDate(favoritos);
         groupedFavoritos[fecha].splice(index, 1);
 
-        if (groupedFavoritos[fecha].length === 0) {
-            delete groupedFavoritos[fecha];
+        index = parseInt(index, 10); //Para que el índice sea un número entero
+
+        if (groupedFavoritos[fecha]) {
+            groupedFavoritos[fecha].splice(index, 1);
+
+
+            if (groupedFavoritos[fecha].length === 0) {
+                delete groupedFavoritos[fecha];
+            }
+
+            favoritos = [];
+            Object.keys(groupedFavoritos).forEach(fecha => {
+                favoritos.push(...groupedFavoritos[fecha]);
+            });
+
+            localStorage.setItem('favoritos', JSON.stringify(favoritos));
+            renderTable();
         }
-
-        const nuevosFavoritos = [];
-        Object.keys(groupedFavoritos).forEach(fecha => {
-            nuevosFavoritos.push(...groupedFavoritos[fecha]);
-        });
-
-        localStorage.setItem('favoritos', JSON.stringify(nuevosFavoritos));
-        renderTable();
     };
 
+    const ImprSelec = (favoritos) => {
+        const contenido = document.getElementById(favoritos).innerHTML;
+        const contenidoOriginal = document.body.innerHTML;
+
+        //Se crea un nuevo documento para imprimir
+        const printWindow = window.open('', '', 'height=600, width=800');
+        printWindow.document.write('<html><heat><title>Imprimir Tabla</title>');
+        printWindow.document.write('<link rel="stylesheet" type="text/css" href="../css/pages.css/miarchivo.css">')
+        printWindow.document.write('</heat><body >');
+        printWindow.document.write('<table>' + contenido + '</table>');
+        printWindow.document.write('</body></html>');
+        printWindow.document.close();
+        printWindow.focus();
+        printWindow.print();
+
+
+        //Se restaura contenido original
+        document.body.innerHTML = contenidoOriginal;
+
+    };
+
+    //Se asigna al botón de impresión
+    document.getElementById('imprimir-tabla').addEventListener('click', () => ImprSelec('favoritos'));
+
+
     renderTable();
+
 });
