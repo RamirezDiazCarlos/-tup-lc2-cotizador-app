@@ -10,6 +10,8 @@
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet"><!--LINK DE LA FUENTE "ROBOTO" DESDE GOOGLE FONTS-->
     <link rel="stylesheet" href="../css/pages.css/informes.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
     <title>Cotizador de Monedas - Informes</title>
 </head>
 
@@ -62,7 +64,8 @@
                         <div class="select-boton">
                             <select name="moneda" id="moneda">
                                 <option value="">Elegir</option>
-                                <option value="TODAS">TODAS - Se van a mostrar todas las cotizaciones disponibles</option>
+                                <option value="TODAS">TODAS - Se van a mostrar todas las cotizaciones disponibles
+                                </option>
                                 <option value="dolar_oficial">Dólar Oficial</option>
                                 <option value="dolar_blue">Dólar Blue</option>
                                 <option value="dolar_bolsa">Dólar Bolsa (MEP)</option>
@@ -75,7 +78,8 @@
                                 <option value="peso_chileno">Peso Chileno</option>
                                 <option value="peso_uruguayo">Peso Uruguayo</option>
                             </select>
-                            <button class="boton_busqueda" title="Buscar"><img src="../img/boton-busqueda.svg" alt="busqueda"></button>
+                            <button class="boton_busqueda" title="Buscar"><img src="../img/boton-busqueda.svg"
+                                    alt="busqueda"></button>
                         </div>
                         <div class="compartir">
                             <button class="boton-compartir" title="Compartir"></button>
@@ -83,7 +87,11 @@
                         </div>
                     </div>
                     <!--GRAFICO A MOSTRAR-->
-                    <div class="graficos"><img src="../img/dolar-blue.jpg" alt="grafico" title="Grafico Dolar Blue"></div>
+                    <!--<div class="graficos"><img src="../img/dolar-blue.jpg" alt="grafico" title="Grafico Dolar Blue"></div>-->
+                    <div class="graficos">
+                        <canvas id="grafico"></canvas>
+                    </div>
+
                 </div>
                 <!--TABLA A MOSTRAR-->
                 <div class="contenedor-tabla">
@@ -106,31 +114,36 @@
                                 <td>15/04/24</td>
                                 <td>$995</td>
                                 <td>$1015</td>
-                                <td><img src="../img/flecha-abajo.png" alt="depreciación" title="Depreciación" class="flechas"></td>
+                                <td><img src="../img/flecha-abajo.png" alt="depreciación" title="Depreciación"
+                                        class="flechas"></td>
                             </tr>
                             <tr>
                                 <td>14/04/24</td>
                                 <td>$996.09</td>
                                 <td>$1000.06</td>
-                                <td><img src="../img/flecha-arriba.png" alt="apreciación" title="Aprecicación" class="flechas"></td>
+                                <td><img src="../img/flecha-arriba.png" alt="apreciación" title="Aprecicación"
+                                        class="flechas"></td>
                             </tr>
                             <tr>
                                 <td>13/04/24</td>
                                 <td>$1355.2</td>
                                 <td>$1419.2</td>
-                                <td><img src="../img/flecha-abajo.png" alt="depreciación" title="Depreciación" class="flechas"></td>
+                                <td><img src="../img/flecha-abajo.png" alt="depreciación" title="Depreciación"
+                                        class="flechas"></td>
                             </tr>
                             <tr>
                                 <td>12/04/24</td>
                                 <td>$1050</td>
                                 <td>$1086</td>
-                                <td><img src="../img/flecha-arriba.png" alt="apreciación" title="Aprecicación" class="flechas"></td>
+                                <td><img src="../img/flecha-arriba.png" alt="apreciación" title="Aprecicación"
+                                        class="flechas"></td>
                             </tr>
                             <tr>
                                 <td>11/04/24</td>
                                 <td>$1000</td>
                                 <td>$1200</td>
-                                <td><img src="../img/flecha-arriba.png" alt="apreciación" title="Aprecicación" class="flechas"></td>
+                                <td><img src="../img/flecha-arriba.png" alt="apreciación" title="Aprecicación"
+                                        class="flechas"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -167,7 +180,7 @@
                 </div>
                 <div>
                     <h3>Desarrollado por</h3>
-                    <p>Garcia Nahir</p>
+                    <p>Garcia Nair</p>
                     <p>Rambado Matias</p>
                     <p>Ramirez Diaz Carlos</p>
                     <p>TUP8 - 2024</p>
@@ -176,6 +189,7 @@
             <p>TUP - Cátedra de Laboratorio de Computación 2 - Año 2024</p>
         </div>
     </footer>
+    <script src="../js/pages.js/informes.js" defer></script>
 </body>
 
 </html>
