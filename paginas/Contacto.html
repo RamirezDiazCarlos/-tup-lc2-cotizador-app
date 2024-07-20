@@ -55,36 +55,32 @@
             </div>
             <div class="contenido-principal">
                 <h2>Contacto Web Cotizaciones</h2>
-                <!--FORMULARIO DE CONTACTO-->
                 <div class="formulario-texto">
                     <div class="contenedor-formulario">
                         <div class="formulario">
                             <fieldset>
                                 <legend>DATOS DE CONTACTO</legend>
                                 <label for="nombre" title="Nombre">Nombre:</label>
-                                <input type="text" id="nombre" name="nombre" value="" /><br><br>
-
+                                <input type="text" id="nombre" name="nombre" /><br><br>
+        
                                 <label for="email" title="Email">Email:</label>
-                                <input type="text" id="email" name="email" value="" /><br><br>
-
+                                <input type="email" id="email" name="email" /><br><br>
+        
                                 <label for="mensaje" title="Mensaje">Mensaje:</label>
-                                <textarea type="text" id="mensaje" name="mensaje" size="40" cols="40"
-                                    rows="5"></textarea><br>
+                                <textarea id="mensaje" name="mensaje" cols="40" rows="5"></textarea><br>
                             </fieldset>
                         </div>
                         <div class="botones-formulario">
-                            <button class="limpiar" title="Limpiar">LIMPIAR</button>
-                            <button class="enviar" title="Enviar">ENVIAR</button>
+                            <button class="limpiar" title="Limpiar" onclick="limpiarFormulario()">LIMPIAR</button>
+                            <button class="enviar" title="Enviar" onclick="enviarFormulario()">ENVIAR</button>
                         </div>
                     </div>
-                    <!--SUGERENCIAS-->
                     <div class="contenedor-texto">
                         <div class="parrafos">
                             <p class="sugerencia">Si tiene alguna sugerencia o inconveniente por favor complete el siguiente formulario y
                                 envíenoslo. Lo contactaremos a la brevedad.</p>
                             <p class="dolarapi">Esta web esta desarrollada utilizando <a href="http://dolarapi.com/" target="_blank" title="Ir a DolarAPI">http://dolarapi.com/</a></p>
                         </div>
-                        <!--DATOS DE CONTACTO-->
                         <div class="datos-contacto">
                             <div class="tex">
                                 <p>DATOS DE CONTACTO</p>
@@ -139,6 +135,16 @@
             <p>TUP - Cátedra de Laboratorio de Computación 2 - Año 2024</p>
         </div>
     </footer>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "nuI3_zM_nc6Az9_Bh",
+            });
+        })();
+    </script>
+    <script src="../js/pages.js/contacto.js"></script>
 </body>
 
 </html>

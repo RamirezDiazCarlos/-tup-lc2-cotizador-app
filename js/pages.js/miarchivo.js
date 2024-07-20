@@ -1,4 +1,3 @@
-
 function removerDeFavoritos(cotizacion) {
     let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
     favoritos = favoritos.filter(fav => !(fav.titulo === cotizacion.titulo && fav.compra === cotizacion.compra && fav.venta === cotizacion.venta));
@@ -53,13 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const eliminarFavorito = (fecha, index) => {
         let groupedFavoritos = groupByDate(favoritos);
-        groupedFavoritos[fecha].splice(index, 1);
-
-        index = parseInt(index, 10); //Para que el índice sea un número entero
+        index = parseInt(index, 10);
 
         if (groupedFavoritos[fecha]) {
             groupedFavoritos[fecha].splice(index, 1);
-
 
             if (groupedFavoritos[fecha].length === 0) {
                 delete groupedFavoritos[fecha];
@@ -79,27 +75,20 @@ document.addEventListener('DOMContentLoaded', () => {
         const contenido = document.getElementById(favoritos).innerHTML;
         const contenidoOriginal = document.body.innerHTML;
 
-        //Se crea un nuevo documento para imprimir
         const printWindow = window.open('', '', 'height=600, width=800');
-        printWindow.document.write('<html><heat><title>Imprimir Tabla</title>');
-        printWindow.document.write('<link rel="stylesheet" type="text/css" href="../css/pages.css/miarchivo.css">')
-        printWindow.document.write('</heat><body >');
+        printWindow.document.write('<html><head><title>Imprimir Tabla</title>');
+        printWindow.document.write('<link rel="stylesheet" type="text/css" href="../css/pages.css/miarchivo.css">');
+        printWindow.document.write('</head><body>');
         printWindow.document.write('<table>' + contenido + '</table>');
         printWindow.document.write('</body></html>');
         printWindow.document.close();
         printWindow.focus();
         printWindow.print();
 
-
-        //Se restaura contenido original
         document.body.innerHTML = contenidoOriginal;
-
     };
 
-    //Se asigna al botón de impresión
     document.getElementById('imprimir-tabla').addEventListener('click', () => ImprSelec('favoritos'));
 
-
     renderTable();
-
 });
