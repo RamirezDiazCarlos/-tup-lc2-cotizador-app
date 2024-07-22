@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function actualizarCotizaciones(moneda, data) {
         const contenedor = document.getElementById('tipoDeCambio');
-        contenedor.innerHTML = ''; // Limpiar contenido existente
+        contenedor.innerHTML = '';
 
         const crearDivCotizacion = (titulo, compra, venta) => {
             const div = document.createElement('div');
