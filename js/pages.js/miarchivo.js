@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contenedor = document.getElementById('favoritos');
 
     const groupByDate = (data) => {
-        return data.reduce((acc, item) => {
+        return data.reduce((acc, item) => {//reduce itera en el array "data" (reduce los elementos a un único valor)
             if (!acc[item.fecha]) {
                 acc[item.fecha] = [];
             }
@@ -51,17 +51,17 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     const eliminarFavorito = (fecha, index) => {
-        let groupedFavoritos = groupByDate(favoritos);
-        index = parseInt(index, 10);
+        let groupedFavoritos = groupByDate(favoritos);// groupByDate objeto donde las claves son las fechas y los valores son arrays de cotizaciones
+        index = parseInt(index, 10); //convierte el index (que se recibe como cadena) a un número entero.
 
         if (groupedFavoritos[fecha]) {
             groupedFavoritos[fecha].splice(index, 1);
 
             if (groupedFavoritos[fecha].length === 0) {
-                delete groupedFavoritos[fecha];
+                delete groupedFavoritos[fecha];// despues de eliminar la cotización se verifica si quedan cotizaciones en esa fecha, si no queda nada se elimina de groupedFavoritos
             }
 
-            favoritos = [];
+            favoritos = [];//se reconstruye el array a partir de groupFavoritos actualizado y se guarda en localStorage
             Object.keys(groupedFavoritos).forEach(fecha => {
                 favoritos.push(...groupedFavoritos[fecha]);
             });

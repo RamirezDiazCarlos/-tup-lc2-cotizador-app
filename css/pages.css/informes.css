@@ -1,3 +1,18 @@
+:root {
+    /* Fondo principal oscuro */
+    --color-bg: #1f1f1f;
+    /* Fondo secundario para contenedores */
+    --color-bg-secondary: #2f2f2f;
+    /* Dorado para acentos */
+    --color-accent: #ffd700;
+    /* Texto principal claro */
+    --color-text: #f0f0f0;
+    /* Texto secundario un poco más gris */
+    --color-text-secondary: #cccccc;
+    /* Un dorado un poco más suave, por si necesitas matices */
+    --color-accent-soft: #e6c155;
+}
+
 * {
     font-family: "Roboto", sans-serif;
     font-weight: 500;
@@ -8,26 +23,27 @@
 
 body,
 html {
+    margin: 0;
+    padding: 0;
     width: 100%;
-    background-color: gray;
+    background-color: var(--color-bg);
+    color: var(--color-text);
 }
 
 header {
+    background: url('../../img/fondo_header.jpg') center/cover no-repeat;
     height: 100px;
     margin: 10px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../img/fondo_header.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 header h1 {
-    font-size: 4vw;
-    text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    color:  rgb(255, 215, 0);
+    font-size: 3vw;
+    color: var(--color-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 .section-main {
@@ -35,13 +51,13 @@ header h1 {
 }
 
 section {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--color-bg-secondary);
+    margin: 10px;
+    border-radius: 24px;
     display: flex;
     flex-direction: column;
     min-width: auto;
     max-width: 20%;
-    margin: 10px;
-    border-radius: 24px;
 }
 
 nav {
@@ -61,21 +77,18 @@ nav ul {
 }
 
 nav ul li {
-    background-color: rgb(255, 215, 0);
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
     border-radius: 15px;
 }
 
 nav ul a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--color-bg);
 }
 
 nav ul li:hover {
-    background-color: gray;
+    background-color: var(--color-accent-soft);
 }
 
 .seleccionado li {
@@ -197,36 +210,64 @@ main {
 }
 
 .contenedor-tabla {
+    width: 100%;
     display: flex;
-    align-items: center;
-}
-
-.contenedor-tabla table {
-    border-radius: 25px;
-    margin: 0 auto;
+    justify-content: center;
     margin-bottom: 10px;
+    overflow-x: auto;
 }
 
 table {
     width: 90%;
-    border-collapse: collapse;
-    background-color: #e1eafa;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 15px auto;
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
-th,td {
-    border-left: 1px solid;
-    border-right: 1px solid;
-    text-align: center;
+thead tr {
+    background-color: var(--color-accent); 
+    color: var(--color-bg); 
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 th {
-    background-color: rgb(175, 208, 240);
-    border-color: rgb(175, 208, 240);
+    padding: 14px 18px;
+    text-align: center;
+    font-weight: 700;
+}
+
+tbody tr {
+    background-color: var(--color-bg-secondary);
+    border-bottom: 1px solid var(--color-accent-soft); 
+    transition: background-color 0.3s ease;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #2b2b2b;
+}
+
+tbody tr:hover {
+    background-color: #3f3f3f;
+}
+
+td {
+    padding: 12px 18px;
+    text-align: center;
+    border-right: 1px solid var(--color-accent-soft);
+}
+
+tbody tr td:last-child {
+    border-right: none;
 }
 
 .moneda-seleccionada {
     text-align: left;
-    background-color: rgb(99, 167, 245);
     padding: 1px;
 }
 
@@ -235,14 +276,16 @@ th {
 }
 
 footer {
-    background-color: #000000;
-    color: rgb(255, 215, 0);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
     margin: 10px;
     border-radius: 25px;
+    padding: 20px;
 }
 
 footer a {
-    color: rgb(255, 215, 0);
+    color: var(--color-accent);
+    text-decoration: none;
 }
 
 .footer-cards {
