@@ -88,6 +88,11 @@ nav ul li {
     background-color: var(--color-accent);
     color: var(--color-bg);
     border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 5px 10px;
 }
 
 nav ul a {
@@ -166,6 +171,7 @@ main {
 
 .monedas label {
     margin: 5px;
+    color: var(--color-bg);
 }
 
 .monedas select {

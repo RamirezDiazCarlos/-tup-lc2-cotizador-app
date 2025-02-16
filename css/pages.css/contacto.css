@@ -1,3 +1,18 @@
+:root {
+    /* Fondo principal oscuro */
+    --color-bg: #1f1f1f;
+    /* Fondo secundario para contenedores */
+    --color-bg-secondary: #2f2f2f;
+    /* Dorado para acentos */
+    --color-accent: #ffd700;
+    /* Texto principal claro */
+    --color-text: #f0f0f0;
+    /* Texto secundario un poco más gris */
+    --color-text-secondary: #cccccc;
+    /* Un dorado un poco más suave, por si necesitas matices */
+    --color-accent-soft: #e6c155;
+}
+
 /*ESTILO GLOBAL*/
 * {
     font-family: "Roboto", sans-serif;
@@ -9,27 +24,31 @@
 
 body,
 html {
-    width: 100vw;
-    background-color: gray;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    font-family: "Roboto", sans-serif;
 }
+
 /*ESTILO ENCABEZADO*/
 header {
+    background: url('../../img/fondo_header.jpg') center/cover no-repeat;
     height: 100px;
     margin: 10px;
     border-radius: 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-image: url('../../img/fondo_header.jpg');
-    background-size: cover;
-    background-position: center;
 }
 
 header h1 {
-    font-size: 4vw;
-    text-shadow: 4px 4px 4px rgb(0, 0, 0);
-    color:  rgb(255, 215, 0);
+    font-size: 3vw;
+    color: var(--color-accent);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
+
 /*SECCIONES PRINCIPALES*/
 .section-main {
     display: flex;
@@ -38,13 +57,13 @@ header h1 {
 
 /*ESTILO NAVEGACION*/
 section {
-    background-color: rgb(0, 0, 0);
+    background-color: var(--color-bg-secondary);
+    margin: 10px;
+    border-radius: 24px;
     display: flex;
     flex-direction: column;
     min-width: auto;
     max-width: 20%;
-    margin: 10px;
-    border-radius: 24px;
 }
 
 nav {
@@ -64,25 +83,27 @@ nav ul {
 }
 
 nav ul li {
-    background-color: rgb(255, 215, 0);
-    height: 40px;
+    background-color: var(--color-accent);
+    color: var(--color-bg);
+    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 15px;
+    gap: 8px;
+    padding: 5px 10px;
 }
 
 nav ul a {
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: var(--color-bg);
 }
 
 nav ul li:hover {
-    background-color: gray;
+    background-color: var(--color-accent-soft);
 }
 
 .seleccionado li {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.6);
 }
 
 /*ESTILO RECOMENDACIONES*/
@@ -104,7 +125,7 @@ nav ul li:hover {
 
 .comentario {
     flex: 1;
-    color:aliceblue;
+    color: aliceblue;
     font-size: 12px;
 }
 
@@ -123,26 +144,33 @@ main {
 }
 
 .contenido-principal {
-    background-color: rgb(0, 0, 0);
-    height: 450px;
+    /* background-color: var(--color-bg); */
     margin: 10px;
     border-radius: 24px;
+    padding: 20px;
 }
 
 .contenido-principal h2 {
     text-align: center;
     padding: 10px 10px;
-    color:  rgb(255, 215, 0);
+    color: var(--color-accent);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
 }
 
 /*ESTILO FORMULARIO y TEXTO*/
 .formulario-texto {
     display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .contenedor-formulario {
-    margin: 15px;
+    order: 1;
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 .formulario {
@@ -150,57 +178,94 @@ main {
 }
 
 fieldset {
-    height: 250px;
     border-radius: 10px;
     padding: 20px;
-    background-color: gray;
-    border: grey;
-    width: 450px;
+    background-color: var(--color-bg-secondary);
+    border: 1px solid var(--color-accent-soft);
+    color: var(--color-text);
+    width: 100%;
+    box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 legend {
-    background-color: gray;
-    border-radius: 10px;
-    padding: 10px;
+    color: var(--color-accent);
+    font-weight: bold;
+    padding: 0 10px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--color-text);
+    font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    background-color: #3f3f3f;
+    border: 1px solid var(--color-accent-soft);
+    border-radius: 5px;
+    padding: 8px;
+    color: var(--color-text);
+    margin-bottom: 10px;
+    box-sizing: border-box;
 }
 
 .botones-formulario {
-    margin: 5px 0px 0px 100px;
+    display: flex;
+    gap: 10px;
+    margin: 0 0 0 10px;
 }
 
-.limpiar {
-    background-color: rgb(191, 192, 192);
-    height: 30px;
-    width: 100px;
-}
-
+.limpiar,
 .enviar {
-    background-color: rgb(140, 184, 143);
-    height: 30px;
-    width: 100px;
+    background-color: var(--color-accent-soft);
+    color: var(--color-bg);
+    border: none;
+    border-radius: 5px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.limpiar:hover,
+.enviar:hover {
+    background-color: var(--color-accent);
 }
 
 .contenedor-texto {
-    display:flex;
+    order: 2;
+    display: flex;
     flex-direction: column;
-    gap: 5%;
+    gap: 20px;
     align-items: center;
     justify-content: center;
+    width: 50%;
 }
 
 .datos-contacto {
     display: flex;
-    gap: 3%;
-    background-color: gray;
+    gap: 10px;
+    background-color: var(--color-bg-secondary);
     align-items: center;
     border-radius: 15px;
     width: 335px;
     padding: 15px;
+    color: var(--color-text);
+}
+
+.datos-contacto p {
+    margin: 5px 0;
 }
 
 .tex {
     display: flex;
     flex-direction: column;
+    line-height: 1.4;
 }
 
 .datos-contacto img {
@@ -208,29 +273,49 @@ legend {
 }
 
 .parrafos {
-    text-align:center;
-    width: 480px;
-    color: rgb(255, 215, 0);
+    text-align: center;
+    width: 100%;
+    color: var(--color-accent);
+    margin-bottom: 10px;
 }
 
 .dolarapi {
-    margin-top: 55px;
+    margin-top: 10px;
 }
 
 .dolarapi a {
-    color: rgb(255, 215, 0);
+    color: var(--color-accent);
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+    .formulario-texto {
+        flex-direction: column;
+    }
+
+    .contenedor-texto {
+        order: 1;
+        width: 100%;
+    }
+
+    .contenedor-formulario {
+        order: 2;
+        width: 100%;
+    }
 }
 
 /*ESTILO PIE DE PAGINA*/
 footer {
-    background-color: #000000;
-    color: rgb(255, 215, 0);
+    background-color: var(--color-bg-secondary);
+    color: var(--color-text-secondary);
     margin: 10px;
     border-radius: 25px;
+    padding: 20px;
 }
 
 footer a {
-    color: rgb(255, 215, 0);
+    color: var(--color-accent);
+    text-decoration: none;
 }
 
 .footer-cards {
