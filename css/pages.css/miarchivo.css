@@ -100,7 +100,7 @@ nav ul li:hover {
 }
 
 .seleccionado li {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
 .recomendaciones {

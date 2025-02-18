@@ -97,7 +97,7 @@ nav ul li:hover {
 }
 
 .seleccionado li {
-    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
 }
 
 .recomendaciones {
@@ -118,7 +118,7 @@ nav ul li:hover {
 
 .comentario {
     flex: 1;
-    color:aliceblue;
+    color: aliceblue;
     font-size: 12px;
 }
 
@@ -152,40 +152,49 @@ main {
 }
 
 .contenedor_monedas {
-    padding: 10px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
 }
 
 .monedas {
     display: flex;
-    flex-direction: column;
-    padding: 10px;
+    /* flex-direction: column; */
     background-color: rgb(255, 215, 0);
     border-radius: 15px;
-    margin-left: 20px;
-    max-height: 75px;
+    padding: 10px;
+    min-width: 250px;
 }
 
 .select-boton {
     display: flex;
+    gap: 8px;
+    margin-bottom: 8px;
 }
 
 .monedas select {
     height: 45px;
-    margin: 8px;
+    margin: 0;
+    align-items: center;
 }
 
 .boton_busqueda {
     height: 45px;
-    margin-top: 8px;
 }
 
 .graficos {
-    width: 750px;
-    height: 220px;
+    flex: 1;
     background-color: gray;
-    margin-left: 80px;
-    margin-right: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    min-width: 300px;
+    box-sizing: border-box;
+}
+
+.graficos canvas {
+    width: 100%;
+    height: auto;
 }
 
 .graficos img {
@@ -194,11 +203,10 @@ main {
 }
 
 .compartir {
-    margin-top: 100px;
+    margin-top: auto;
     display: flex;
     gap: 10px;
     align-items: center;
-    margin-left: 45px;
     margin-bottom: 15px;
 }
 
@@ -211,7 +219,7 @@ main {
 }
 
 .compartir a {
-    color:  rgb(255, 215, 0);
+    color: rgb(255, 215, 0);
 }
 
 .contenedor-tabla {
@@ -235,8 +243,8 @@ table {
 }
 
 thead tr {
-    background-color: var(--color-accent); 
-    color: var(--color-bg); 
+    background-color: var(--color-accent);
+    color: var(--color-bg);
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
@@ -249,7 +257,7 @@ th {
 
 tbody tr {
     background-color: var(--color-bg-secondary);
-    border-bottom: 1px solid var(--color-accent-soft); 
+    border-bottom: 1px solid var(--color-accent-soft);
     transition: background-color 0.3s ease;
 }
 
@@ -278,6 +286,19 @@ tbody tr td:last-child {
 
 .flechas {
     height: 25px;
+}
+
+@media (max-width: 768px) {
+    .contenedor_monedas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .monedas,
+    .graficos {
+        width: 100%;
+        min-width: 0;
+    }
 }
 
 footer {
