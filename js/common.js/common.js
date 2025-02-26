@@ -55,7 +55,7 @@ document.addEventListener('DOMContentLoaded', () => {
             `;
 
             const favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-            const yaFavorito = favoritos.some(fav => fav.titulo === titulo && fav.compra === compra && fav.venta === venta);
+            const yaFavorito = favoritos.some(fav => fav.titulo === titulo && fav.compra === compra && fav.venta === venta);//SOME si alguno de los elementos cumple con la condición
 
             const botonFavoritos = div.querySelector('.boton_favoritos');
             if (yaFavorito) {

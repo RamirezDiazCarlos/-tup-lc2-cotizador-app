@@ -1,9 +1,3 @@
-function removerDeFavoritos(cotizacion) {
-    let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
-    favoritos = favoritos.filter(fav => !(fav.titulo === cotizacion.titulo && fav.compra === cotizacion.compra && fav.venta === cotizacion.venta));
-    localStorage.setItem('favoritos', JSON.stringify(favoritos));
-}
-
 document.addEventListener('DOMContentLoaded', () => {
     let favoritos = JSON.parse(localStorage.getItem('favoritos')) || [];
     const contenedor = document.getElementById('favoritos');
@@ -87,6 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.body.innerHTML = contenidoOriginal;
     };
+    
 
     document.getElementById('imprimir-tabla').addEventListener('click', () => ImprSelec('favoritos'));
 
